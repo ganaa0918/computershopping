@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    hr{
+      width: 300px;
+      border: 3px solid #434444;
+    }
+    .row{
+      padding-top: 50px;
+    }
+    /* product grid */
+    .product-grid
+    {
+      padding-bottom: 20px;
+      padding-top: 28px
+    }
+    .product-grid:hover
+    {
+      box-shadow: 0 4px  8px 0 rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .image{
+      position: relative;
+    }
+    .overlay{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgba(67, 68, 68, 0.7);
+    }
+    .image:hover .overlay{
+      opacity: 1;
+    }
+    .detail{
+      color: #fff;
+      font-size: 20px;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+    .buy{
+
+      background-color: transparent;
+      color: #434444;
+      border: 0;
+      border: 1px solid #434444;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .buy:hover{
+      background-color: #434444;
+      color: #fff;
+    }
+    .carousel-inner img {
+      width: 100%; 
+      
+      margin: auto;
+      min-height:200px;
+    }
+    
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none; 
+      }
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 25px;
+    }
+    #login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Yu-tech</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          Category <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="cp.html">Computer parts</a></li>
+            <li><a href="#">Computer accessories </a></li>
+            <li><a href="#">Monitor</a></li>                        
+            <li><a href="#">Mobile Phones, Tablets / Accessories</a></li>                        
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="navbar-form navbar-left" action="/action_page.php">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="search">
+          <button type="button" class="btn btn-default">
+            <i class="fas fa-search"></i>
+        </div>
+        
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                  <ul id="login-dp" class="dropdown-menu">
+                   <li>
+           <div class="row">
+              <div class="col-md-12">
+                Login via
+                <div class="social-buttons">
+                  <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                  <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                </div>
+                                or
+                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                    <div class="form-group">
+                       <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                       <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                       <label class="sr-only" for="exampleInputPassword2">Password</label>
+                       <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                             <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                    </div>
+                    <div class="form-group">
+                       <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                    </div>
+                    <div class="checkbox">
+                       <label>
+                       <input type="checkbox"> keep me logged-in
+                       </label>
+                    </div>
+                 </form>
+              </div>
+              <div class="bottom text-center">
+                New here ? <a href="#"><b>Join Us</b></a>
+              </div>
+           </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <div class="carousel-inner" >
+              <div class="item active">
+              <img src="./arctis.jpg  " alt="Image"> 
+      </div>
+</div>
+  
+<div class="container text-center">    
+  <h3>Product</h3><br>
+  <div class="row">
+    <div class="col-sm-4 product-grid">
+      <div class="image">
+      <a href="#">
+        <img src="./razer-deathadder-v2-500x500.png" class="img-responsive" style="width:100%" alt="Image">
+        <div class="overlay">
+          <div class="detail">Дэлгэрэнгүй үзэх</div>
+        </div>
+      </a>
+    </div>
+      <h4 class="text-center">Razer deathhadder black</h4>
+      <hr>
+      <h5 class="text-center">65000 ₮</h5>
+     <a href="#" class="btn buy">buy</a>
+    </div>
+    <div class="col-sm-4 product-grid"> 
+      <div class="image">
+        <a href="">
+      <img src="./i9-11900KF-1.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <div class="overlay">
+        <div class="detail">Дэлгэрэнгүй үзэх</div>
+      </div>
+    </a>
+    </div>
+      <h4 class="text-center">i9- 11000F</h4> 
+      <hr>
+      <h5 class="text-center">1350000 ₮</h5>  
+      <a href="#" class="btn buy">buy</a>
+    </div>
+    
+      
+      <div class="col-sm-4 product-grid">
+        <div class="image">
+          <a href="">
+        <img src="./hyperx pad.jpg" alt="pad" width="100%">
+        <div class="overlay">
+          <div class="detail">Дэлгэрэнгүй үзэх</div>
+        </div>
+      </a>
+      </div>
+        <h4 class="text-center">Hyperx pad</h4>
+        <hr>
+        <h5 class="text-center">50000 ₮</h5>        
+        <a href="#" class="btn buy">buy</a>
+      </div>
+      
+      <div class="col-sm-4 product-grid">
+        <div class="image">
+          <a href="#">
+        <img src="./i5.jpg" alt="i511" width="80%">
+        <div class="overlay">
+          <div class="detail">Дэлгэрэнгүй үзэх</div>
+        </div>
+      </a>
+      </div>
+        <h4 class="text-center">i5 1100F </h4>
+        <h5 class="text-center">580000 ₮</h5>
+        <a href="#" class="btn buy">buy</a>
+      </div>
+      <div class="col-sm-4 product-grid">
+        <div class="image">
+          <a href="#">
+        <img src="./hyperx ram.jpg" alt="i3 10" width="80%">
+        <div class="overlay">
+          <div class="detail">Дэлгэрэнгүй үзэх</div>
+        </div>
+      </a>
+      </div>
+        <h4 class="text-center"> Hyperx ddr4 16gb</h4>
+        <h5 class="text-center"> 160000 ₮</h5>
+        <a href="#" class="btn buy">buy</a>
+      </div>
+
+      <div class="col-sm-4 product-grid">
+        <div class="image">
+        <a href="#">
+        <img src="./s-l500.jpg" alt="i3 10" width="80%" height="100%">
+        <div class="overlay">
+          <div class="detail">Дэлгэрэнгүй үзэх</div>
+        </div>
+        </a>
+      </div>
+        <h4 class="text-center"> Vengeance ddr4 14gb</h4>
+        <h5 class="text-center"> 160000 ₮</h5>
+        <a href="#" class="btn buy">buy</a>s
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<footer class="container-fluid text-center">
+  <p>Made by yuno</p>
+</footer>
+
+</body>
+</html>

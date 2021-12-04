@@ -1,0 +1,18 @@
+{
+    "liveServer.settings.port": 5501,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "127.0.01",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "SIGN IN FORM",
+            "database": "database123",
+            "username": "root",
+            "password": ""
+        }
+    ]
+}

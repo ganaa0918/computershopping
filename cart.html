@@ -1,0 +1,217 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+     <title>Document</title>
+ </head>
+ <style>
+@import "https://fonts.googleapis.com/css?family=Lato:300,400,700";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    background: rgb(99, 148, 248) none repeat scroll 0 0;
+    font: 14px/22px "Lato",Arial,sans-serif;
+}
+.lighter-text {
+    color: rgb(171, 176, 190);
+}
+.main-color-text {
+    color: rgb(99, 148, 248);
+}
+nav {
+    background: rgb(248, 248, 248) none repeat scroll 0 0;
+    font-size: 16px;
+    padding: 20px 0 40px;
+}
+nav .navbar-left {
+    float: left;
+}
+nav .navbar-right {
+    float: right;
+}
+nav ul li {
+    display: inline;
+    padding-left: 20px;
+}
+nav ul li a {
+    color: rgb(119, 119, 119);
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+.container {
+    margin: auto;
+    width: 80%;
+}
+.badge {
+    background-color: rgb(99, 148, 248);
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 12px;
+    height: 25px;
+    line-height: 1;
+    padding: 6px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 25px;
+    
+}
+.shopping-cart {
+    background: rgb(255, 255, 255) none repeat scroll 0 0;
+    border-radius: 3px;
+    float: right;
+    margin: 20px 0;
+    padding: 20px;
+    position: relative;
+    width: 320px;
+}
+.shopping-cart .shopping-cart-header {
+    border-bottom: 1px solid rgb(232, 232, 232);
+    padding-bottom: 15px;
+}
+.shopping-cart .shopping-cart-header .shopping-cart-total {
+    float: right;
+}
+.shopping-cart .shopping-cart-items {
+    padding-top: 20px;
+}
+.shopping-cart .shopping-cart-items li {
+    margin-bottom: 18px;
+}
+.shopping-cart .shopping-cart-items img {
+    float: left;
+    margin-right: 12px;
+}
+.shopping-cart .shopping-cart-items .item-name {
+    display: block;
+    font-size: 16px;
+    padding-top: 10px;
+}
+.shopping-cart .shopping-cart-items .item-price {
+    color: rgb(99, 148, 248);
+    font-size: 12px;
+    margin-right: 8px;
+}
+.shopping-cart .shopping-cart-items .item-quantity {
+    color: rgb(171, 176, 190);
+    font-size: 13px;
+}
+.shopping-cart::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgb(255, 255, 255);
+    border-image: none;
+    border-style: solid;
+    border-width: 8px;
+    bottom: 100%;
+    content: " ";
+    height: 0;
+    left: 89%;
+    margin-left: -8px;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+}
+.cart-icon {
+    color: rgb(81, 87, 131);
+    float: left;
+    font-size: 24px;
+    margin-right: 7px;
+}
+.button {
+    background: rgb(99, 148, 248) none repeat scroll 0 0;
+    border-radius: 30px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.15);
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 16px;
+    margin: 25px 0 15px;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+}
+.button:hover {
+    background: rgb(114, 158, 249) none repeat scroll 0 0;
+}
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+ </style>
+ <body>
+    <nav>
+        <div class="container">
+          <ul class="navbar-right">
+            <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li>
+          </ul> <!--end navbar-right -->
+        </div> <!--end container -->
+      </nav>
+       
+       
+      <div class="container">
+              <div class="shopping-cart">
+          <div class="shopping-cart-header">
+            <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+            <div class="shopping-cart-total">
+              <span class="lighter-text">Total:</span>
+              <span class="main-color-text">$2,229.97</span>
+            </div>
+          </div> <!--end shopping-cart-header -->
+       
+          <ul class="shopping-cart-items">
+            <li class="clearfix">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+              <span class="item-name">Sony DSC-RX100M III</span>
+              <span class="item-price">$849.99</span>
+              <span class="item-quantity">Quantity: 01</span>
+            </li>
+       
+            <li class="clearfix">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
+              <span class="item-name">KS Automatic Mechanic...</span>
+              <span class="item-price">$1,249.99</span>
+              <span class="item-quantity">Quantity: 01</span>
+            </li>
+       
+            <li class="clearfix">
+              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg" alt="item1" />
+              <span class="item-name">Kindle, 6" Glare-Free To...</span>
+              <span class="item-price">$129.99</span>
+              <span class="item-quantity">Quantity: 01</span>
+            </li>
+          </ul>
+       
+                 <a href="#" class="button">Checkout</a>
+                 </div> <!--end shopping-cart -->
+      </div>
+      </nav>
+      <script>       
+(function(){
+ 
+  $("#cart").on("click", function() {
+    $(".shopping-cart").fadeToggle( "fast");
+  });
+  
+})();
+
+      </script>
+ </body>
+ </html>

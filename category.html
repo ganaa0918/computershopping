@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome-free-5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  #login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+  }
+</style>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#">Yu-tech</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li ><a href="./home.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                Category <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="cp.html">Computer parts</a></li>
+                  <li><a href="#">Computer accessories </a></li>
+                  <li><a href="#">Monitor</a></li>                        
+                  <li><a href="#">Mobile Phones, Tablets / Accessories</a></li>                        
+                </ul>
+              </li>
+
+             
+              
+            </ul>
+            <form class="navbar-form navbar-left" action="/action_page.php">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="search">
+                <button type="button" class="btn btn-default">
+                  <i class="fas fa-search"></i>
+              </div>
+              
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                         <li>
+                 <div class="row">
+                    <div class="col-md-12">
+                      Login via
+                      <div class="social-buttons">
+                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                      </div>
+                                      or
+                       <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                          <div class="form-group">
+                             <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                             <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                          </div>
+                          <div class="form-group">
+                             <label class="sr-only" for="exampleInputPassword2">Password</label>
+                             <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                   <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                          </div>
+                          <div class="form-group">
+                             <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                          </div>
+                          <div class="checkbox">
+                             <label>
+                             <input type="checkbox"> keep me logged-in
+                             </label>
+                          </div>
+                       </form>
+                    </div>
+                    <div class="bottom text-center">
+                      New here ? <a href="#"><b>Join Us</b></a>
+                    </div>
+                 </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+     
+</div>
+
+<div class="container text-center">    
+<h3>features</h3><br>
+<div class="row">
+<div class="col-sm-4">
+<img src="./razer-deathadder-v2-500x500.png" class="img-responsive" style="width:100%" alt="Image">
+<p>Razer deathhadder black</p>
+<p>65000 ₮</p>
+<button type="button" class="btn btn-info">Үзэх</button>
+</div>
+<div class="col-sm-4"> 
+<img src="./i9-11900KF-1.jpg" class="img-responsive" style="width:100%" alt="Image">
+<p>i9- 11000F</p> 
+<p>1350000 ₮</p>  
+<button type="button" class="btn btn-info">Үзэх</button>
+</div>
+
+
+<div class="col-sm-4">
+  <img src="./hyperx pad.jpg" alt="pad" width="100%">
+  <p >Hyperx pad</p>
+  <p>50000 ₮</p>        
+  <a href="#">
+    <button type="button" class="btn btn-info">Үзэх</button>
+   </a>
+</div>
+
+<div class="col-sm-4">
+  <img src="./i5.jpg" alt="i511" width="80%">
+  <p>i5 1100F </p>
+  <p>580000 ₮</p>
+  <a href="#">
+    <button type="button" class="btn btn-info">Үзэх</button>
+   </a>
+</div>
+<div class="col-sm-4">
+  <img src="./hyperx ram.jpg" alt="i3 10" width="80%">
+  <p> Hyperx ddr4 16gb</p>
+  <p> 160000 ₮</p>
+  <a href="#">
+
+    <button type="button" class="btn btn-info">Үзэх</button>
+   </a>
+</div>
+<div class="col-sm-4">
+  <img src="./s-l500.jpg" alt="i3 10" width="80%" height="100%">
+  <p> Vengeance ddr4 14gb</p>
+  <p> 160000 ₮</p>
+  <a href="#">
+
+    <button type="button" class="btn btn-info">Үзэх</button>
+             </a>
+</div>
+</div>
+</div>
+</div><br>
+</body>
+</html>
